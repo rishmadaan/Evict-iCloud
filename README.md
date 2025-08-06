@@ -2,10 +2,6 @@
 
 A tiny Apple Script utility that frees disk space by “evicting” local copies of any iCloud Drive folder—exactly what Finder’s **Remove Download** does, but in one click.
 
-<p align="center">
-  <img src="docs/screenshot.png" alt="App dialog preview" width="550">
-</p>
-
 ## Why?
 
 * Keep archive-heavy folders in iCloud without clogging your SSD  
