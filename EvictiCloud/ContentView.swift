@@ -1,5 +1,4 @@
 import SwiftUI
-import UniformTypeIdentifiers
 
 struct ContentView: View {
     @State private var isTargeted = false
@@ -47,11 +46,14 @@ struct ContentView: View {
     }
 
     private func evict(_ urls: [URL]) {
-        let accessed = urls.filter { $0.startAccessingSecurityScopedResource() }
-        let summary = EvictEngine(ops: RealFileOps()).evict(urls: urls)
-        accessed.forEach { $0.stopAccessingSecurityScopedResource() }
-        let (title, body) = EvictReport.message(for: summary, items: urls)
-        lastResult = "\(title) \u{2014} \(body)"
+        lastResult = "Evicting\u{2026}"
+        Task.detached(priority: .userInitiated) {
+            let accessed = urls.filter { $0.startAccessingSecurityScopedResource() }
+            let summary = EvictEngine(ops: RealFileOps()).evict(urls: urls)
+            accessed.forEach { $0.stopAccessingSecurityScopedResource() }
+            let (title, body) = EvictReport.message(for: summary, items: urls)
+            await MainActor.run { lastResult = "\(title) \u{2014} \(body)" }
+        }
     }
 
     private func openExtensionSettings() {
