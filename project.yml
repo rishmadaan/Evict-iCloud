@@ -1,0 +1,74 @@
+name: EvictiCloud
+options:
+  bundleIdPrefix: com.rishmadaan
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    CODE_SIGN_IDENTITY: "-"
+    CODE_SIGN_STYLE: Manual
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+targets:
+  EvictiCloud:
+    type: application
+    platform: macOS
+    sources:
+      - path: EvictiCloud
+      - path: Shared
+    entitlements:
+      path: EvictiCloud/EvictiCloud.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.files.user-selected.read-only: true
+    info:
+      path: EvictiCloud/Info.plist
+      properties:
+        CFBundleDisplayName: Evict iCloud
+        LSApplicationCategoryType: public.app-category.utilities
+    dependencies:
+      - target: EvictAction
+        embed: true
+  EvictAction:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: EvictAction
+      - path: Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.rishmadaan.EvictiCloud.EvictAction
+    entitlements:
+      path: EvictAction/EvictAction.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.files.user-selected.read-only: true
+    info:
+      path: EvictAction/Info.plist
+      properties:
+        CFBundleDisplayName: Evict from iCloud
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.services
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).ActionRequestHandler
+          NSExtensionAttributes:
+            NSExtensionActivationRule: SUBQUERY(extensionItems, $extensionItem, SUBQUERY($extensionItem.attachments, $attachment, ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.item").@count >= 1).@count >= 1
+            NSExtensionServiceAllowsFinderPreviewItem: true
+            NSExtensionServiceAllowsTouchBarItem: false
+  EvictiCloudTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Tests
+      - path: Shared
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  EvictiCloud:
+    build:
+      targets:
+        EvictiCloud: all
+    test:
+      targets:
+        - EvictiCloudTests
