@@ -609,7 +609,7 @@ cp -R "build/Build/Products/Debug/EvictiCloud.app" /Applications/
 open /Applications/EvictiCloud.app
 ```
 
-Expected: app launches showing the stub window; launching registers the extension with pluginkit. Verify registration: `pluginkit -m -i com.rishmadaan.EvictAction` prints a line (leading `-` means present but disabled — that is fine at this point).
+Expected: app launches showing the stub window; launching registers the extension with pluginkit. Verify registration: `pluginkit -m -i com.rishmadaan.EvictiCloud.EvictAction` prints a line (leading `-` means present but disabled — that is fine at this point).
 
 - [ ] **Step 5: HUMAN VERIFY (risk #2 gate) — STOP and report**
 
