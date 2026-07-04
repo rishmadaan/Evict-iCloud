@@ -75,4 +75,15 @@ final class EvictEngineTests: XCTestCase {
         XCTAssertEqual(summary.failed, 2)
         XCTAssertEqual(summary.firstError, "simulated eviction failure")
     }
+
+    func test_folderFailureWithEmptyWalkReportsFailure() {
+        let ops = MockFileOps()
+        ops.ubiquitous = [folder]
+        ops.directories = [folder]
+        ops.failing = [folder]
+        let summary = makeEngine(ops).evict(urls: [folder])
+        XCTAssertEqual(summary.failed, 1)
+        XCTAssertEqual(summary.evicted, 0)
+        XCTAssertEqual(summary.firstError, "simulated eviction failure")
+    }
 }

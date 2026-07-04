@@ -37,7 +37,7 @@ public struct EvictEngine {
                 summary.evicted += 1
             } catch {
                 if ops.isDirectory(url) {
-                    evictContents(of: url, into: &summary)
+                    evictContents(of: url, into: &summary, folderError: error)
                 } else {
                     record(error, into: &summary)
                 }
@@ -46,8 +46,10 @@ public struct EvictEngine {
         return summary
     }
 
-    private func evictContents(of dir: URL, into summary: inout EvictSummary) {
+    private func evictContents(of dir: URL, into summary: inout EvictSummary, folderError: Error) {
+        var processed = 0
         for file in ops.filesUnder(dir) {
+            processed += 1
             if ops.isDataless(file) {
                 summary.skipped += 1
                 continue
@@ -58,6 +60,9 @@ public struct EvictEngine {
             } catch {
                 record(error, into: &summary)
             }
+        }
+        if processed == 0 {
+            record(folderError, into: &summary)
         }
     }
 

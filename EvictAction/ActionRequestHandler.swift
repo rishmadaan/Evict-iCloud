@@ -6,10 +6,14 @@ final class ActionRequestHandler: NSObject, NSExtensionRequestHandling {
     func beginRequest(with context: NSExtensionContext) {
         Task {
             let urls = await Self.fileURLs(from: context)
-            let accessed = urls.filter { $0.startAccessingSecurityScopedResource() }
-            let summary = EvictEngine(ops: RealFileOps()).evict(urls: urls)
-            accessed.forEach { $0.stopAccessingSecurityScopedResource() }
-            await Self.notify(summary: summary, items: urls)
+            if urls.isEmpty {
+                await Self.post(title: "Evict iCloud", body: "Could not read the selected items.")
+            } else {
+                let accessed = urls.filter { $0.startAccessingSecurityScopedResource() }
+                let summary = EvictEngine(ops: RealFileOps()).evict(urls: urls)
+                accessed.forEach { $0.stopAccessingSecurityScopedResource() }
+                await Self.notify(summary: summary, items: urls)
+            }
             context.completeRequest(returningItems: nil)
         }
     }
@@ -34,9 +38,13 @@ final class ActionRequestHandler: NSObject, NSExtensionRequestHandling {
     }
 
     static func notify(summary: EvictSummary, items: [URL]) async {
+        let (title, body) = EvictReport.message(for: summary, items: items)
+        await post(title: title, body: body)
+    }
+
+    static func post(title: String, body: String) async {
         let center = UNUserNotificationCenter.current()
         _ = try? await center.requestAuthorization(options: [.alert])
-        let (title, body) = EvictReport.message(for: summary, items: items)
         let content = UNMutableNotificationContent()
         content.title = title
         content.body = body
