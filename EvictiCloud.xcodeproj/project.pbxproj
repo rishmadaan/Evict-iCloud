@@ -17,6 +17,9 @@
 		6A16D7425A3AA8030D052A0C /* EvictEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E4576794AC710A7F425880 /* EvictEngineTests.swift */; };
 		6DEA40A460BE991BB0F09DF1 /* EvictReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343871BF32D32EE3203D798D /* EvictReport.swift */; };
 		95A73B2D877ADAA71F046EE6 /* EvictReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343871BF32D32EE3203D798D /* EvictReport.swift */; };
+		A0C365229CCE9A7977F4922D /* RealFileOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37917B82F4AD049C3723419A /* RealFileOps.swift */; };
+		DB96D3F974CE3CC22DDCC5A6 /* RealFileOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37917B82F4AD049C3723419A /* RealFileOps.swift */; };
+		F44658F4E1C0F3CA7C4BD01B /* RealFileOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37917B82F4AD049C3723419A /* RealFileOps.swift */; };
 		F905401C18A61F2B1D5DDCC4 /* EvictEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056C68FCB3F719D2FB59D39 /* EvictEngine.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,7 @@
 		271A7F833B20822B211ABB3D /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
 		2BBCC973703D77A6FC3D8782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		343871BF32D32EE3203D798D /* EvictReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvictReport.swift; sourceTree = "<group>"; };
+		37917B82F4AD049C3723419A /* RealFileOps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealFileOps.swift; sourceTree = "<group>"; };
 		399EE356B3921956B6797605 /* EvictiCloud.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EvictiCloud.entitlements; sourceTree = "<group>"; };
 		5D9FEE141BF578E88AA86102 /* EvictiCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvictiCloudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E4557AE85A11C613795EF5 /* EvictAction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EvictAction.entitlements; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 			children = (
 				E056C68FCB3F719D2FB59D39 /* EvictEngine.swift */,
 				343871BF32D32EE3203D798D /* EvictReport.swift */,
+				37917B82F4AD049C3723419A /* RealFileOps.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				3BF3687F2E78ACE0DF8DBA02 /* EvictEngine.swift in Sources */,
 				4A0EB5BE1D816644E7D8A85B /* EvictReport.swift in Sources */,
 				1E0E9EA3095A4A5918898B93 /* EvictiCloudApp.swift in Sources */,
+				DB96D3F974CE3CC22DDCC5A6 /* RealFileOps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +242,7 @@
 				6A16D7425A3AA8030D052A0C /* EvictEngineTests.swift in Sources */,
 				6DEA40A460BE991BB0F09DF1 /* EvictReport.swift in Sources */,
 				446BFEA7667FE080B6F70ED0 /* EvictReportTests.swift in Sources */,
+				F44658F4E1C0F3CA7C4BD01B /* RealFileOps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +253,7 @@
 				5984E725C654C5B9AF027185 /* ActionRequestHandler.swift in Sources */,
 				F905401C18A61F2B1D5DDCC4 /* EvictEngine.swift in Sources */,
 				95A73B2D877ADAA71F046EE6 /* EvictReport.swift in Sources */,
+				A0C365229CCE9A7977F4922D /* RealFileOps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
