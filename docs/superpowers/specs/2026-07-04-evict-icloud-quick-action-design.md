@@ -131,3 +131,18 @@ no shell-outs in the product path). What remains is distribution work:
 
 - Menu bar presence, recent-folders list, scheduling/automation,
   preferences window, analytics, auto-update, localization.
+
+## Amendment — 2026-07-13: Quick Action removed, ships drop-zone only
+
+The Finder Quick Action (Action extension) was removed. On macOS 26 the
+ad-hoc-signed extension registered and appeared in the Finder menu but the
+system never launched its process on click (verified: no process start and no
+launch attempt in the unified log, across enabling the extension, replacing the
+debug build with a Release build, and de-duplicating LaunchServices records).
+The app-extension path is the one Apple polices hardest for unsigned apps.
+
+The app now ships as a drag-and-drop-only utility. The eviction engine
+(`EvictEngine` + `EvictReport` + `RealFileOps`) and the sandboxed host window
+are unchanged; only the extension delivery mechanism was dropped. A future
+reliable right-click path, if wanted, would be an Automator Quick Action
+workflow installed by the app — not an app-extension.

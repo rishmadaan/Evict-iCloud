@@ -10,7 +10,12 @@ struct ContentView: View {
                 .font(.system(size: 36))
                 .foregroundStyle(.tint)
 
-            Text("Right-click any iCloud Drive file or folder,\nthen Quick Actions → \u{201C}Evict from iCloud\u{201D}.")
+            Text("Evict iCloud")
+                .font(.title2.weight(.semibold))
+
+            Text("Reclaim disk space by removing the local copies of\niCloud Drive files. They stay safe in iCloud and\nre-download when you open them \u{2014} nothing is deleted.")
+                .font(.callout)
+                .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
 
             dropZone
@@ -21,15 +26,8 @@ struct ContentView: View {
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
             }
-
-            Text("If the Quick Action doesn\u{2019}t appear, enable \u{201C}Evict from iCloud\u{201D} in Extension Settings.")
-                .font(.caption)
-                .foregroundStyle(.secondary)
-                .multilineTextAlignment(.center)
-
-            Button("Open Extension Settings\u{2026}", action: openExtensionSettings)
         }
-        .padding(24)
+        .padding(28)
         .frame(width: 380)
     }
 
@@ -37,8 +35,11 @@ struct ContentView: View {
         RoundedRectangle(cornerRadius: 12)
             .strokeBorder(style: StrokeStyle(lineWidth: 1.5, dash: [6]))
             .foregroundStyle(isTargeted ? AnyShapeStyle(.tint) : AnyShapeStyle(.secondary))
-            .frame(height: 110)
-            .overlay(Text("Drop files or folders here to evict").foregroundStyle(.secondary))
+            .frame(height: 120)
+            .overlay(
+                Text(isTargeted ? "Release to evict" : "Drop files or folders here")
+                    .foregroundStyle(.secondary)
+            )
             .dropDestination(for: URL.self) { urls, _ in
                 evict(urls)
                 return true
@@ -54,16 +55,5 @@ struct ContentView: View {
             let (title, body) = EvictReport.message(for: summary, items: urls)
             await MainActor.run { lastResult = "\(title) \u{2014} \(body)" }
         }
-    }
-
-    private func openExtensionSettings() {
-        let candidates = [
-            "x-apple.systempreferences:com.apple.ExtensionsPreferences",
-            "x-apple.systempreferences:com.apple.LoginItems-Settings.extension",
-        ]
-        for candidate in candidates {
-            if let url = URL(string: candidate), NSWorkspace.shared.open(url) { return }
-        }
-        NSWorkspace.shared.open(URL(fileURLWithPath: "/System/Applications/System Settings.app"))
     }
 }

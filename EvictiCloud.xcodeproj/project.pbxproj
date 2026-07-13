@@ -11,66 +11,32 @@
 		3BF3687F2E78ACE0DF8DBA02 /* EvictEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056C68FCB3F719D2FB59D39 /* EvictEngine.swift */; };
 		446BFEA7667FE080B6F70ED0 /* EvictReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76963D3C89F4F33FB9B7545 /* EvictReportTests.swift */; };
 		4A0EB5BE1D816644E7D8A85B /* EvictReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343871BF32D32EE3203D798D /* EvictReport.swift */; };
-		5984E725C654C5B9AF027185 /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A7F833B20822B211ABB3D /* ActionRequestHandler.swift */; };
 		67DB08A7500E389C69BA4C38 /* EvictEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056C68FCB3F719D2FB59D39 /* EvictEngine.swift */; };
-		6828B6E44546155CA3EB309A /* EvictAction.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E78758CE13F382BF6C0FA3E1 /* EvictAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6A16D7425A3AA8030D052A0C /* EvictEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E4576794AC710A7F425880 /* EvictEngineTests.swift */; };
 		6DEA40A460BE991BB0F09DF1 /* EvictReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343871BF32D32EE3203D798D /* EvictReport.swift */; };
-		95A73B2D877ADAA71F046EE6 /* EvictReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343871BF32D32EE3203D798D /* EvictReport.swift */; };
-		A0C365229CCE9A7977F4922D /* RealFileOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37917B82F4AD049C3723419A /* RealFileOps.swift */; };
 		C3F086A2C02B3A79A62C42DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602DB0CAE7B71F98CACED61F /* ContentView.swift */; };
 		DB96D3F974CE3CC22DDCC5A6 /* RealFileOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37917B82F4AD049C3723419A /* RealFileOps.swift */; };
 		F44658F4E1C0F3CA7C4BD01B /* RealFileOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37917B82F4AD049C3723419A /* RealFileOps.swift */; };
-		F905401C18A61F2B1D5DDCC4 /* EvictEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056C68FCB3F719D2FB59D39 /* EvictEngine.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		849E93C00D9F4492C114FDA3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2153D5D25908695FE90063F6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AE033EBDC417EE62845882AF;
-			remoteInfo = EvictAction;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		6F6DEF314A91E666F1667A8E /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				6828B6E44546155CA3EB309A /* EvictAction.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		07BBE217C2F6F8579E103A6A /* EvictiCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvictiCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		271A7F833B20822B211ABB3D /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
 		2BBCC973703D77A6FC3D8782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		343871BF32D32EE3203D798D /* EvictReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvictReport.swift; sourceTree = "<group>"; };
 		37917B82F4AD049C3723419A /* RealFileOps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealFileOps.swift; sourceTree = "<group>"; };
 		399EE356B3921956B6797605 /* EvictiCloud.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EvictiCloud.entitlements; sourceTree = "<group>"; };
 		5D9FEE141BF578E88AA86102 /* EvictiCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvictiCloudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		602DB0CAE7B71F98CACED61F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		87E4557AE85A11C613795EF5 /* EvictAction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EvictAction.entitlements; sourceTree = "<group>"; };
 		8A98180BD900AF68038D6599 /* EvictiCloudApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvictiCloudApp.swift; sourceTree = "<group>"; };
 		90E4576794AC710A7F425880 /* EvictEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvictEngineTests.swift; sourceTree = "<group>"; };
 		A76963D3C89F4F33FB9B7545 /* EvictReportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvictReportTests.swift; sourceTree = "<group>"; };
-		B621093A8948F240A5EBA7C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E056C68FCB3F719D2FB59D39 /* EvictEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvictEngine.swift; sourceTree = "<group>"; };
-		E78758CE13F382BF6C0FA3E1 /* EvictAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EvictAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		0B02B2343AEE4DA90CE31C74 = {
 			isa = PBXGroup;
 			children = (
-				116F989C1510A2BC01D23242 /* EvictAction */,
 				4F0B84017A4584D759F27E60 /* EvictiCloud */,
 				59363891398ED728DCD560B3 /* Shared */,
 				210453BB029DF6F7783E0EF1 /* Tests */,
@@ -81,21 +47,10 @@
 		0B9F4A5EFB008B8568433F35 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E78758CE13F382BF6C0FA3E1 /* EvictAction.appex */,
 				07BBE217C2F6F8579E103A6A /* EvictiCloud.app */,
 				5D9FEE141BF578E88AA86102 /* EvictiCloudTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		116F989C1510A2BC01D23242 /* EvictAction */ = {
-			isa = PBXGroup;
-			children = (
-				271A7F833B20822B211ABB3D /* ActionRequestHandler.swift */,
-				87E4557AE85A11C613795EF5 /* EvictAction.entitlements */,
-				B621093A8948F240A5EBA7C2 /* Info.plist */,
-			);
-			path = EvictAction;
 			sourceTree = "<group>";
 		};
 		210453BB029DF6F7783E0EF1 /* Tests */ = {
@@ -136,12 +91,10 @@
 			buildConfigurationList = 6D0E1E790B66CC4CB8134C8F /* Build configuration list for PBXNativeTarget "EvictiCloud" */;
 			buildPhases = (
 				656E69D2FB11EA4475363025 /* Sources */,
-				6F6DEF314A91E666F1667A8E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CEADE4B0AC981163305F161B /* PBXTargetDependency */,
 			);
 			name = EvictiCloud;
 			packageProductDependencies = (
@@ -167,23 +120,6 @@
 			productReference = 5D9FEE141BF578E88AA86102 /* EvictiCloudTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AE033EBDC417EE62845882AF /* EvictAction */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9CE7190A96E4EC202A78F7F8 /* Build configuration list for PBXNativeTarget "EvictAction" */;
-			buildPhases = (
-				AC56A312764D875DDAAF61B8 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EvictAction;
-			packageProductDependencies = (
-			);
-			productName = EvictAction;
-			productReference = E78758CE13F382BF6C0FA3E1 /* EvictAction.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,9 +133,6 @@
 						ProvisioningStyle = Manual;
 					};
 					864E0920338FA6DEBFA38590 = {
-						ProvisioningStyle = Manual;
-					};
-					AE033EBDC417EE62845882AF = {
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -218,7 +151,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AE033EBDC417EE62845882AF /* EvictAction */,
 				23137F24DD0D462AA24BD948 /* EvictiCloud */,
 				864E0920338FA6DEBFA38590 /* EvictiCloudTests */,
 			);
@@ -250,44 +182,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC56A312764D875DDAAF61B8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5984E725C654C5B9AF027185 /* ActionRequestHandler.swift in Sources */,
-				F905401C18A61F2B1D5DDCC4 /* EvictEngine.swift in Sources */,
-				95A73B2D877ADAA71F046EE6 /* EvictReport.swift in Sources */,
-				A0C365229CCE9A7977F4922D /* RealFileOps.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		CEADE4B0AC981163305F161B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AE033EBDC417EE62845882AF /* EvictAction */;
-			targetProxy = 849E93C00D9F4492C114FDA3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		1DDBBD554A4CEF08C1AAD12E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = EvictAction/EvictAction.entitlements;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = EvictAction/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rishmadaan.EvictiCloud.EvictAction;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 		277DF6496AC0B38B373A3141 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -417,22 +314,6 @@
 			};
 			name = Release;
 		};
-		AB29AE762D5436F3E4E874AB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = EvictAction/EvictAction.entitlements;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = EvictAction/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rishmadaan.EvictiCloud.EvictAction;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
 		AC1561B7D7F3C8611DB35394 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -508,15 +389,6 @@
 			buildConfigurations = (
 				80EAB2FE74107CFBF1BCC24F /* Debug */,
 				2F4BED1BADCA70613E883259 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		9CE7190A96E4EC202A78F7F8 /* Build configuration list for PBXNativeTarget "EvictAction" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB29AE762D5436F3E4E874AB /* Debug */,
-				1DDBBD554A4CEF08C1AAD12E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
