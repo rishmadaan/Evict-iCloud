@@ -21,10 +21,8 @@ seconds. The window shows what happened after each drop.
 
 Prebuilt binaries are not provided (yet — see below). Building takes a minute:
 
-1. Install Xcode (16+) and [XcodeGen](https://github.com/yonaskolb/XcodeGen)
-   (`brew install xcodegen`) — or skip XcodeGen and open the committed
-   `EvictiCloud.xcodeproj` directly.
-2. `xcodegen generate && xcodebuild -project EvictiCloud.xcodeproj -scheme EvictiCloud -configuration Release -derivedDataPath build build`
+1. Install Xcode (16+).
+2. `xcodebuild -project EvictiCloud.xcodeproj -scheme EvictiCloud -configuration Release -derivedDataPath build build`
 3. Copy `build/Build/Products/Release/EvictiCloud.app` to `/Applications` and
    launch it.
 
