@@ -22,5 +22,7 @@
 	<string>1</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright (c) 2025-2026 Rishabh Madaan</string>
 </dict>
 </plist>
