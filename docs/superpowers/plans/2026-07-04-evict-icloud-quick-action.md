@@ -1,5 +1,9 @@
 # Evict iCloud — Finder Quick Action Implementation Plan
 
+> Historical document: the current app and distribution policy are described in
+> [README.md](../../../README.md). App Store readiness claims below predate the
+> GPL-3.0-or-later migration and do not establish license compatibility.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Rewrite the AppleScript utility as `Evict iCloud.app` — a Finder Quick Action ("Evict from iCloud") plus a small SwiftUI host window with a drop zone, per the spec at `docs/superpowers/specs/2026-07-04-evict-icloud-quick-action-design.md`.

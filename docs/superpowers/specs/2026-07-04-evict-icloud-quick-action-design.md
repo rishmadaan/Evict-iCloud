@@ -1,5 +1,9 @@
 # Evict iCloud — Finder Quick Action App (Design)
 
+> Historical document: the current app and distribution policy are described in
+> [README.md](../../../README.md). App Store readiness claims below predate the
+> GPL-3.0-or-later migration and do not establish license compatibility.
+
 **Date:** 2026-07-04
 **Status:** Approved
 **Scope:** Deliberately minimal. A quick Swift app, not a platform.

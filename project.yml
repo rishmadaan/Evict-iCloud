@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
 name: EvictiCloud
 options:
   bundleIdPrefix: com.rishmadaan
@@ -17,6 +18,8 @@ targets:
     sources:
       - path: EvictiCloud
       - path: Shared
+      - path: LICENSE
+        buildPhase: resources
     entitlements:
       path: EvictiCloud/EvictiCloud.entitlements
       properties:
@@ -26,6 +29,7 @@ targets:
       path: EvictiCloud/Info.plist
       properties:
         CFBundleDisplayName: Evict iCloud
+        NSHumanReadableCopyright: "Copyright (c) 2025-2026 Rishabh Madaan"
         LSApplicationCategoryType: public.app-category.utilities
   EvictiCloudTests:
     type: bundle.unit-test
